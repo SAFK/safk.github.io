@@ -1,0 +1,20 @@
+$breakpoints: (
+  'xs':     ( max-width:  480px ),
+  'small':  ( max-width:  767px ),
+  'medium': ( max-width:  992px ),
+  'large':  ( max-width: 1200px )
+) !default;
+
+@mixin breakpoint($breakpoint) {
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+        // Prints a media query based on the value
+        @media #{inspect(map-get($breakpoints, $breakpoint))} {
+          @content;
+        }
+    } @else {
+        @media (max-width: #{$breakpoint}) {
+            @content;
+        }
+    }
+}

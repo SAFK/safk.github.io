@@ -1,0 +1,105 @@
+.contact {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    min-height: 700px;
+    background: $primary-color;
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(center);
+    @include flex-direction(column);
+
+    &__centre {
+        max-width: 1200px;
+    }
+
+    &__text {
+        position: relative;
+
+        h3,
+        a {
+            display: inline-block;
+        }
+
+        h3 {
+            color: #111;
+            font-weight: 200;
+            @include rem(font-size, 52px);
+        }
+
+        a {
+            color: #111;
+            font-weight: 700;
+            margin-left: 5px;
+            border-bottom: 4px solid #fff;
+            @include rem(font-size, 52px);
+        }
+    }
+
+    &__info {
+        display: block;
+        position: absolute;
+        width: 70%;
+        margin: 0 auto;
+        bottom: 30px;
+        font-family: 'Libre Baskerville', serif;
+
+        &__address,
+        &__social {
+            display: inline-block;
+        }
+
+        &__address {
+            @include rem(font-size, 14px);
+            
+            &--email {
+                position: relative;
+                font-weight: 700;
+            }
+
+            &--divider {
+                display: inline-block;
+                width: 60px;
+                height: 2px;
+                position: relative;
+                top: -4px;
+                margin: 0 20px;
+                background: #111;
+            }
+
+            &--adr {
+                color: #444;
+            }
+        }
+
+        &__social {
+            float: right;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: inline-block;
+
+                a {
+                    color: #444;
+                    @include rem(font-size, 14px);
+                }
+            }
+        }
+    }
+}
+
+/*  section.contact
+  .contact__centre
+    .contact__text
+      h3 Have A Project To Discuss?
+      a(href="#") Let's Talk.
+  .contact__info
+    .contact__info__address
+      span.contact__info__address--email info@safk.co
+      span.contact__info__address--adr 38 Victoria Cr, Nanaimo, BC, Canada
+    ul.contact__info__social
+      li
+        a(href="#") Facebook*/
