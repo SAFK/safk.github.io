@@ -1,7 +1,7 @@
 doctype html
 html(lang="en", dir="ltr")
   head
-    title Hello word
+    title SAFK
 
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0, minimal-ui")
@@ -13,36 +13,17 @@ html(lang="en", dir="ltr")
     script(src="/assets/javascript/bundle.js")
   body
     section.intro
-      .intro__left
-        nav.nav
-          .nav__logo
-            a(href="/")
-          ul.nav__items
-            li
-              a(href="#") About Us
-            li
-              a(href="#") Get in Touch
-        .intro__centre.intro__wrapper
-          h2.intro__title--start SAFK is
-          h1.intro__title--middle Social Media
-          h3.intro__title--end Agency
-          .intro__divider
-          p.intro__text SAFK creates experiences that transform brands, grow businesses and make people's lives better.
-      .intro__right
-        ul.intro__magic.intro__magic--white
-          li.s s
-          li.s a
-          li.s f
-          li.s k
+      .intro__image
+        .intro__tilt
+          img.intro__tilt__image.tilt-effect(src="/assets/images/background1.jpg", data-tilt-options='{ "opacity" : 0.7, "movement": { "perspective" : 1000, "translateX" : 70, "translateY" : 10, "translateZ" : 2, "rotateX" : 3, "rotateY" : 3 } }')
+      .container.intro__container
+        h2.intro__sub We are SAFK
+        h1.intro__title We influence&nbsp;
+          br
+          | the world
 
     section.about
-      .about__left
-        ul.intro__magic
-          li.s s
-          li.s a
-          li.s f
-          li.s k
-      .about__right
+      .container.about__container
         .about__block
           h4.about__block__title About Us
           h3.about__block__headline We Love Create & Inspire Others
@@ -62,11 +43,11 @@ html(lang="en", dir="ltr")
         .contact__text
           h3 Have A Project To Discuss?
           a(href="#") Let's Talk.
-      .contact__info
+      .container.contact__info
         .contact__info__address
           span.contact__info__address--email hi@safk.co
           .contact__info__address--divider
-          span.contact__info__address--adr Poku tee 21, 76403
+          span.contact__info__address--adr Põdra 5, 10915
         ul.contact__info__social
           li
             a(href="#") Facebook

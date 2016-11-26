@@ -2,6 +2,100 @@ $nav-height: 75px;
 
 $intro-text-color: #fff;
 
+.tilt {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.tilt__back,
+.tilt__front {
+	width: 100%;
+	height: 100%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.tilt__back {
+	position: relative;
+}
+
+.tilt__front {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.intro {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+    @include clearfix;
+
+    &__image {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    }
+
+    &__tilt {
+        width: 100%;
+        height: 100%;
+        @include filter(grayscale(100%) brightness(105%) contrast(120%));
+        @include transition(filter 0.3s);
+
+        &__image {
+            min-width: 100%;
+            min-height: 100%;
+        }
+    }
+
+    &__container {
+        height: 100%;
+        pointer-events: none;
+        @include display(flex);
+        @include justify-content(center);
+        @include flex-direction(column);
+    }
+
+    &__sub {
+        margin: 0 0 5px 0;
+        padding: 0;
+        color: #999;
+        font-weight: 200;
+        z-index: 20;
+            pointer-events: none;
+        @include rem(font-size, 28px);
+    }
+
+    &__title {
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        line-height: 1.2;
+        z-index: 20;
+            pointer-events: none;
+        @include rem(font-size, 73px);
+    }
+
+    &:hover {
+        .intro__tilt {
+            @include filter(none);
+        }
+    }
+}
+/*
 .intro {
     position: relative;
     min-height: 700px;
@@ -201,7 +295,7 @@ $intro-text-color: #fff;
 		opacity: 0.5;
 	}
 	70% {
-		opacity: .6; /*peak*/
+		opacity: .6;
 	}
 	72% {
 		opacity: 0.5;
@@ -210,7 +304,7 @@ $intro-text-color: #fff;
 		opacity: 0.5;
 	}
 	95% {
-		opacity: .6; /*peak*/
+		opacity: .6;
 	}
 	97% {
 		opacity: 0.5;
