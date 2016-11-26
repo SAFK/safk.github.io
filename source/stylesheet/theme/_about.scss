@@ -1,0 +1,88 @@
+$about-background: $secondary-color;
+$about-block-title-color: $primary-color;
+$about-block-headline-color: $extra-color;
+$about-block-text-color: $extra-color;
+
+.about {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    min-height: 800px;
+    height: 70vh;
+    background: $extra-color;
+    @include clearfix;
+
+    &__right,
+    &__left {
+        position: relative;
+        height: 100%;
+        display: inline-block;
+    }
+
+    &__right {
+        float: right;
+        width: 80%;
+        padding: 0 70px;
+        background: $about-background;
+        @include display(flex);
+        @include justify-content(center);
+        @include flex-direction(column);
+    }
+
+    &__left {
+        float: left;
+        width: 20%;
+        height: 100%;
+        @include display(flex);
+        @include align-items(center);
+        @include justify-content(center);
+        @include flex-direction(column);
+    }
+
+    &__block {
+        width: 40%;
+        margin-bottom: 80px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &__title {
+            text-transform: uppercase;
+            font-weight: 700;
+            color: $about-block-title-color;
+            @include rem(font-size, 16px);
+        }
+
+        &__headline {
+            font-weight: 200;
+            color: $about-block-headline-color;
+            @include rem(font-size, 32px);
+        }
+
+        &__text {
+            font-family: "Lato", Helvetica,Arial,sans-serif;
+            color: $about-block-text-color;
+            @include rem(font-size, 16px);
+        }
+
+        &__list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: block;
+                width: 100%;
+                margin-bottom: 5px;
+                color: $about-block-text-color;
+                @include rem(font-size, 16px);
+            }
+        }
+    }
+}
+
+.about__container {
+    width: 100%;
+    padding: 0 80px;
+}

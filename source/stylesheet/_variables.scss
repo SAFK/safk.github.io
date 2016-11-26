@@ -1,1 +1,10 @@
-$primary-color: lighten(#f1c40f, 5%);
+//-- Colors
+$primary-color: lighten(#78100f, 1%);
+$secondary-color: #010101;
+$extra-color: #fff;
+
+//-- Contact
+$contact-background: $extra-color;
+$contact-text-color: $secondary-color;
+$contact-text-secondary-color: #444;
+$contact-underline-color: $secondary-color;
