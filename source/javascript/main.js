@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import TiltFX from './tiltfx';
+import TiltFX from './tiltfx/index';
+import vidbg from './vidbg/index';
 
 $(document).ready(() => {
   new TiltFX(document.querySelector('.intro__tilt__image'), {

@@ -45,6 +45,13 @@ gulp.task('server', () => {
   });
 });
 
+// Compiles and deploys videos.
+gulp.task('videos', () => {
+  return gulp.src(config.videos.entry)
+    .pipe($size({ title: '[videos]', gzip: true }))
+    .pipe(gulp.dest(config.videos.output));
+});
+
 // Compiles and deploys images.
 gulp.task('images', () => {
   return gulp.src(config.images.entry)
@@ -53,7 +60,6 @@ gulp.task('images', () => {
   .pipe($size({ title: '[images]', gzip: true }))
   .pipe(gulp.dest(config.images.output));
 });
-
 
 // Compiles and deploys stylesheets.
 gulp.task('stylesheets', () => {
@@ -170,6 +176,7 @@ gulp.task('watch', () => {
 gulp.task('default', () => {
   let seq = [
     'images',
+    'videos',
     'javascripts',
     'stylesheets',
     'html'

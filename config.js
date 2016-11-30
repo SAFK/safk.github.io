@@ -24,6 +24,11 @@ export default {
     output: path.join(buildDir, 'assets', 'images')
   },
 
+  videos: {
+    entry: path.join(sourceDir, 'videos', '**', '*.{ogv,mp4,webm}'),
+    output: path.join(buildDir, 'assets', 'videos')
+  },
+
   javascripts: {
     entry: path.join(sourceDir, 'javascript', 'main.js'),
     output: path.join(buildDir, 'assets', 'javascript', 'bundle.js')
@@ -60,6 +65,9 @@ export default {
     entries: [{
       files: path.join('images', '**', '*.{jpg,jpeg,gif,png,svg}'),
       tasks: ['images']
+    }, {
+      files: path.join('videos', '**', '*.{ogv,mp4,webm}'),
+      tasks: ['videos']
     }, {
       files: path.join('stylesheet', '**', '*.{css,scss,sass}'),
       tasks: ['stylesheets']
