@@ -1,0 +1,32 @@
+.mopen {
+    position: fixed;
+    width: 50px;
+    height: 51px;
+    top: 33px;
+    left: 33px;
+    cursor: pointer;
+    z-index: 10000;
+
+    &__item {
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 33px;
+        background: #FFF;
+        overflow: hidden;
+
+        &--1 {
+            transform: translate(-50%, -8px);
+        }
+
+        &--2 {
+            width: 30px;
+            transform: translate(-50%, 0%);
+        }
+
+        &--3 {
+            transform: translate(-50%, 8px);
+        }
+    }
+}

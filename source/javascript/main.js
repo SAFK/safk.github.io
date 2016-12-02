@@ -14,4 +14,20 @@ $(document).ready(() => {
       'rotateY' : 3
     }
   });
+
+  // Add menu.
+  const $nav = $('.nav');
+  const $main = $('.main');
+
+  $('.mopen').on('click', (e) => {
+    e.preventDefault();
+
+    $nav.toggleClass('nav--active');
+    $main.toggleClass('main__blur');
+  });
+
+  $nav.find('a').on('click', () => {
+    $nav.removeClass('nav--active');
+    $main.removeClass('main__blur');
+  });
 });

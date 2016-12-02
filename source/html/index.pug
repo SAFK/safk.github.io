@@ -12,45 +12,75 @@ html(lang="en", dir="ltr")
 
     script(src="/assets/javascript/bundle.js")
   body
-    section.intro
-      .intro__image
-        .intro__tilt
-          img.intro__tilt__image.tilt-effect(src="/assets/images/background1.jpg", data-tilt-options='{ "opacity" : 0.7, "movement": { "perspective" : 1000, "translateX" : 70, "translateY" : 10, "translateZ" : 2, "rotateX" : 3, "rotateY" : 3 } }')
-      .container.intro__container
-        h2.intro__sub We are SAFK
-        h1.intro__title We influence&nbsp;
-          br
-          | the world
+    .mopen
+      .mopen__item.mopen__item--1
+        div
+      .mopen__item.mopen__item--2
+        div
+      .mopen__item.mopen__item--3
+        div
+    nav.nav
+      .nav__items
+        .nav__item.nav__item--1
+          .nav__item__menu
+            a(href="#")
+              .nav__item__trait
+              .nav__item__text1 Homepage
+              .nav__item__text2 Homepage
+        .nav__item.nav__item--2
+          .nav__item__menu
+            a(href="#about")
+              .nav__item__trait
+              .nav__item__text1 About
+              .nav__item__text2 About
+        .nav__item.nav__item--3
+          .nav__item__menu
+            a(href="#contact")
+              .nav__item__trait
+              .nav__item__text1 Say hello!
+              .nav__item__text2 Say hello!
 
-    section.about(
-      data-vide-bg="mp4: /assets/videos/fire, webm: /assets/videos/fire, ogv: /assets/videos/fire, poster: /assets/images/fire",
-      data-vide-options="muted: true"
-    )
-      .container.about__container
-        .about__block
-          h4.about__block__title About Us
-          h3.about__block__headline We Love Create & Inspire Others
-          p.about__block__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        .about__block
-          h4.about__block__title We Do
-          ul.about__block__list
-            li Brand Identities
-            li User Interfaces
-            li Motion Graphics
-            li Frontend Development
-            li Marketing
-            li Social Media
+    .main
+      section.intro
+        .intro__image
+          .intro__tilt
+            img.intro__tilt__image.tilt-effect(src="/assets/images/background1.jpg", data-tilt-options='{ "opacity" : 0.7, "movement": { "perspective" : 1000, "translateX" : 70, "translateY" : 10, "translateZ" : 2, "rotateX" : 3, "rotateY" : 3 } }')
+        .container.intro__container
+          h2.intro__sub We are SAFK
+          h1.intro__title We influence&nbsp;
+            br
+            | the world
 
-    section.contact
-      .contact__centre
-        .contact__text
-          h3 Have A Project To Discuss?
-          a(href="#") Let's Talk.
-      .container.contact__info
-        .contact__info__address
-          span.contact__info__address--email hi@safk.co
-          .contact__info__address--divider
-          span.contact__info__address--adr Põdra 5, 10915
-        ul.contact__info__social
-          li
-            a(href="#") Facebook
+      section#about.about(
+        data-vide-bg="mp4: /assets/videos/fire, webm: /assets/videos/fire, ogv: /assets/videos/fire, poster: /assets/images/fire",
+        data-vide-options="muted: true"
+      )
+        .container.about__container
+          .about__block
+            h4.about__block__title About Us
+            h3.about__block__headline We Love Create & Inspire Others
+            p.about__block__text High-end camera doesn’t make you a photographer. Neither does a good MacBook make you a designer. It’s what you do which makes you awesome. That’s why we believe that in simplicity lies power. So let us to help you think different.
+            p.about__block__text While walking around the street or surfing in internet you will see roughly 3000 brands every day! From that number you will only knowledge only 1% of them. We are here to help your company/brand be in the 1%! We do something which is powerful, simple and mindblowing.
+          .about__block
+            h4.about__block__title We Do
+            ul.about__block__list
+              li Brand Identities
+              li User Interfaces
+              li Motion Graphics
+              li Frontend Development
+              li Marketing
+              li Social Media
+
+      section#contact.contact
+        .contact__centre
+          .contact__text
+            h3 Have A Project To Discuss?
+            a(href="mailto:hi@safk.co?subject=Hi") Let's Talk.
+        .container.contact__info
+          .contact__info__address
+            span.contact__info__address--email hi@safk.co
+            .contact__info__address--divider
+            span.contact__info__address--adr Põdra 5, 10915
+          ul.contact__info__social
+            li
+              a(href="#") Facebook
