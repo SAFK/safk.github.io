@@ -12,49 +12,27 @@ html(lang="en", dir="ltr")
 
     script(src="/assets/javascript/bundle.js")
   body
-    .mopen
-      .mopen__item.mopen__item--1
-        div
-      .mopen__item.mopen__item--2
-        div
-      .mopen__item.mopen__item--3
-        div
-    nav.nav
-      .nav__items
-        .nav__item.nav__item--1
-          .nav__item__menu
-            a(href="#")
-              .nav__item__trait
-              .nav__item__text1 Homepage
-              .nav__item__text2 Homepage
-        .nav__item.nav__item--2
-          .nav__item__menu
-            a(href="#about")
-              .nav__item__trait
-              .nav__item__text1 About
-              .nav__item__text2 About
-        .nav__item.nav__item--3
-          .nav__item__menu
-            a(href="#contact")
-              .nav__item__trait
-              .nav__item__text1 Say hello!
-              .nav__item__text2 Say hello!
-
-    .main
-      section.intro
+    section.intro.cd-section.visible
+      div
+        ul.genertiswinner.genertiswinner--white
+          li.active Who we are
+          li What we do
+          li Say Hello
         .intro__image
           .intro__tilt
             img.intro__tilt__image.tilt-effect(src="/assets/images/background1.jpg", data-tilt-options='{ "opacity" : 0.7, "movement": { "perspective" : 1000, "translateX" : 70, "translateY" : 10, "translateZ" : 2, "rotateX" : 3, "rotateY" : 3 } }')
         .container.intro__container
-          h2.intro__sub We are SAFK
-          h1.intro__title We influence&nbsp;
-            br
-            | the world
-
-      section#about.about(
+          h1.intro__title We are SAFK
+        
+    section#about.about.cd-section
+      div(
         data-vide-bg="mp4: /assets/videos/fire, webm: /assets/videos/fire, ogv: /assets/videos/fire, poster: /assets/images/fire",
         data-vide-options="muted: true"
       )
+        ul.genertiswinner.genertiswinner--white
+            li Who we are
+            li.active What we do
+            li Say Hello
         .container.about__container
           .about__block
             h4.about__block__title About Us
@@ -71,7 +49,12 @@ html(lang="en", dir="ltr")
               li Marketing
               li Social Media
 
-      section#contact.contact
+    section#contact.contact.cd-section
+      div
+        ul.genertiswinner
+          li Who we are
+          li What we do
+          li.active Say Hello
         .contact__centre
           .contact__text
             h3 Have A Project To Discuss?

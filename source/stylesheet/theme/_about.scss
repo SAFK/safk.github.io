@@ -8,11 +8,16 @@ $about-block-text-color: $extra-color;
     overflow: hidden;
     display: block;
     min-height: 100vh;
-    background: $about-background;
-    @include clearfix;
-    @include display(flex);
-    @include justify-content(center);
-    @include flex-direction(column);
+    background: $secondary-color;
+   
+    & > div {
+        min-height: 100vh;
+        background: $about-background;
+        @include clearfix;
+        @include display(flex);
+        @include justify-content(center);
+        @include flex-direction(column);
+    }
 
     &__block {
         width: 70%;
