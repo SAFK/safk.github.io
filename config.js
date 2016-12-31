@@ -63,7 +63,7 @@ export default {
 
   watch: {
     entries: [{
-      files: path.join('images', '**', '*.{jpg,jpeg,gif,png,svg}'),
+      files: path.join('images', '**', '*.{jpg,jpeg,gif,png,svg,ico}'),
       tasks: ['images']
     }, {
       files: path.join('videos', '**', '*.{ogv,mp4,webm}'),

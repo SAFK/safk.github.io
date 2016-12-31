@@ -82,6 +82,10 @@ $about-block-text-color: $extra-color;
             padding: 0;
             width: 100%;
             margin-bottom: 70px;
+
+            &:first-child {
+                margin-top: 70px;
+            }
         }
     }
 
@@ -90,6 +94,10 @@ $about-block-text-color: $extra-color;
             width: calc(100% - 70px);
             margin-bottom: 40px;
             padding: 0 35px;
+
+            &:first-child {
+                margin-top: 40px;
+            }
         }
     }
 }
