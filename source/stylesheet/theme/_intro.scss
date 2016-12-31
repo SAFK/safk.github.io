@@ -34,6 +34,7 @@ $intro-text-color: #fff;
 .intro {
     position: relative;
     width: 100%;
+    height: 100vh;
     overflow: hidden;
     background: #000;
     @include clearfix;

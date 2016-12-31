@@ -31,10 +31,11 @@
 
     li {
         position: relative;
-        font-family: 'Playfair Display';
+        font-family: 'Libre Baskerville', serif;
         height: 40px;
         line-height: 40px;
         color: #333;
+        text-align: right;
         @include rem(font-size, 14px);
 
         &.active {
@@ -43,7 +44,7 @@
             &:before {
                 content: "";
                 position: absolute;
-                width: 40px;
+                width: 35px;
                 height: 1px;
                 display: block;
                 right: -40px;
@@ -75,12 +76,6 @@
         @include transform(translateY(0px));
     }
 }
-
-
-.cd-section {
-  height: 100vh;
-}
-
 
 @media only screen and (min-width: 1050px) {
   .cd-section:first-of-type > div::before {
