@@ -88,16 +88,50 @@ $intro-text-color: #fff;
         padding: 0;
         line-height: 1.2;
         z-index: 20;
+        display: block;
         pointer-events: none;
-        text-align: center;
+        text-align: left;
         letter-spacing: 1px;
-        text-transform: uppercase;
-        @include rem(font-size, 92px);
+        text-transform: lowercase;
+        font-weight: 700;
+        @include rem(font-size, 123px);
+    }
+
+    &__description {
+        color: #fff;
+        margin: 0;
+        display: block;
+        font-weight: 200;
+        text-transform: lowercase;
+        max-width: 490px;
+        line-height: 1.5;
+        @include rem(font-size, 26px);
     }
 
     &:hover {
         .intro__tilt {
             @include filter(none);
+        }
+    }
+
+    @include breakpoint('small') {
+        &__title {
+            @include rem(font-size, 52px);
+        }
+    }
+
+    @include breakpoint('xs') {
+        &__container {
+            padding: 0 35px;
+        }
+        
+        &__title,
+        &__description {
+            max-width: calc(100% - 70px);
+        }
+
+        &__description {
+            @include rem(font-size, 18px);
         }
     }
 }

@@ -94,4 +94,43 @@
             }
         }
     }
+
+    @include breakpoint('small') {
+        &__text {
+            text-align: center;
+        } 
+
+        &__info {
+            left: 35px;
+            right: 35px;
+            overflow: hidden;
+            width: calc(100% - 70px);
+
+            &__social {
+                right: 0;
+            }
+        }
+
+        .genertiswinner {
+            top: 5%;
+            bottom: auto;
+            @include transform(translateY(0px));
+        }
+    }
+
+    @include breakpoint('xs') {
+        &__text {
+            h3,
+            a {
+                @include rem(font-size, 36px);
+            }
+        }
+
+        &__info {
+            &__social {
+                right: auto;
+                float: left;
+            }
+        }
+    }
 }

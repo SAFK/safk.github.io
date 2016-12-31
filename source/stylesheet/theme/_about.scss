@@ -1,4 +1,4 @@
-$about-background: rgba($secondary-color, 0.5);
+$about-background: rgba($secondary-color, 0.9);
 $about-block-title-color: $primary-color;
 $about-block-headline-color: $extra-color;
 $about-block-text-color: $extra-color;
@@ -9,7 +9,7 @@ $about-block-text-color: $extra-color;
     display: block;
     min-height: 100vh;
     background: $secondary-color;
-   
+
     & > div {
         min-height: 100vh;
         background: $about-background;
@@ -17,12 +17,24 @@ $about-block-text-color: $extra-color;
         @include display(flex);
         @include justify-content(center);
         @include flex-direction(column);
+
+        &:before {
+            content: " ";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background: $about-background;
+            z-index: 10;
+        }
     }
 
     &__block {
         width: 70%;
+        padding: 0 35px;
         margin-bottom: 100px;
-
+        
         &:last-child {
             margin-bottom: 0;
         }
@@ -62,6 +74,22 @@ $about-block-text-color: $extra-color;
                 color: $about-block-text-color;
                 @include rem(font-size, 16px);
             }
+        }
+    }
+
+    @include breakpoint('small') {
+        &__block {
+            padding: 0;
+            width: 100%;
+            margin-bottom: 70px;
+        }
+    }
+
+    @include breakpoint('xs') {
+        &__block {
+            width: calc(100% - 70px);
+            margin-bottom: 40px;
+            padding: 0 35px;
         }
     }
 }
