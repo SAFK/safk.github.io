@@ -14,30 +14,6 @@ $(document).ready(() => {
       'rotateY' : 3
     }
   });
-/*
-  // Add menu.
-  const $nav = $('.nav');
-  const $main = $('.main');
-
-  $('.mopen').on('click', (e) => {
-    e.preventDefault();
-
-    $nav.toggleClass('nav--active');
-    $main.toggleClass('main__blur');
-  });
-
-  $nav.find('a').on('click', () => {
-    $nav.removeClass('nav--active');
-    $main.removeClass('main__blur');
-  });
-
-
-
-
-
-
-
-*/
 
 	//variables
   var hijacking = 'off',
@@ -58,18 +34,9 @@ $(document).ready(() => {
     var MQ = 'desktop',
       bindToggle = false;
 
-
     bindEvents(MQ, true);
 
-    $(window).on('resize', function () {
-      MQ = deviceType();
-      bindEvents(MQ, bindToggle);
-      if (MQ == 'mobile') bindToggle = true;
-      if (MQ == 'desktop') bindToggle = false;
-    });
-
     function bindEvents(MQ, bool) {
-
       if (MQ == 'desktop' && bool) {
         scrollAnimation();
         $(window).on('scroll', scrollAnimation);
